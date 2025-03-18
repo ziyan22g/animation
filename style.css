@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: lightgray;
+}
+
+.logo h1 {
+    color: black;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: gray;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    transition: .5s;
+}
+
+.show {
+    right: 0;
+    transition: .5s;
+}
+
+.sidebar ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 20px 0 20px 20px;
+}
+
+.sidebar ul li a:hover {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
+    transition: .3s;
+}
+
+.menu {
+    display: none;
+}
+
+.menu i {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+
+    &:hover {
+        color: rgba(0, 0, 0, 0.5);
+        transition: .3s;
+    }
+}
+
+.sidebar .close-btn {
+    margin: 10px 0 0 20px;
+}
+
+.sidebar .close-btn i {
+    font-size: 28px;
+    cursor: pointer;
+
+    &:hover {
+        color: rgba(0, 0, 0, 0.5);
+        transition: .3s;
+    }
+}
+
+.content {
+    margin: 20px 0 0 40px;
+}
+
+.content .heading {
+    margin-bottom: 10px;
+}
+
+.content .heading h3 {
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.para {
+    width: 70%;
+}
+
+.para p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.btn button {
+    padding: 7px 12px;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+@media (max-width:768px) {
+    .nav-bar ul {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .sidebar {
+        display: block;
+    }
+
+
+}
